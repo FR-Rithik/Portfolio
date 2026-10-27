@@ -8,12 +8,6 @@
     };
 
     hamburger.addEventListener('click', toggleMenu);
-    hamburger.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            toggleMenu();
-        }
-    });
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
