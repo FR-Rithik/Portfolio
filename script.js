@@ -1,36 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Preloader
-    const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
-        preloader.style.display = 'none';
-    });
-
-    // Typing effect
-    new Typed('.typing', {
-        strings: ["Backend Developer", "API Engineer", "C++ Systems Builder"],
-        typeSpeed: 90,
-        backSpeed: 55,
-        loop: true
-    });
-
-    // Nav hamburger
+﻿document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+    const toggleMenu = () => {
+        const isOpen = navLinks.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+    };
 
-    // Animate on scroll
-    const observer = new IntersectionObserver((entries, observerInstance) => {
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleMenu();
+        }
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }));
+
+    const observer = new IntersectionObserver((entries, instance) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                observerInstance.unobserve(entry.target);
+                instance.unobserve(entry.target);
             }
         });
     }, { threshold: 0.12 });
-
-    const hiddenElements = document.querySelectorAll('.reveal');
-    hiddenElements.forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 });
