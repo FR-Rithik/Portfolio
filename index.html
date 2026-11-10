@@ -1,81 +1,607 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Md. Fazle Rabbi Rithik, RUET CSE graduate, software developer, and computer vision researcher.">
-    <meta name="theme-color" content="#101b2d">
-    <title>Md. Fazle Rabbi Rithik | Software Developer</title>
+    <meta name="description" content="Portfolio of Md. Fazle Rabbi Rithik — RUET CSE graduate, Backend Software Developer, and Competitive Programmer (Codeforces Specialist 1422). Open to Junior Software Engineer roles.">
+    <meta name="theme-color" content="#0c1120">
+    <title>Md. Fazle Rabbi Rithik | Software Developer &amp; Competitive Programmer</title>
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fr-rithik.netlify.app/">
+    <meta property="og:title" content="Md. Fazle Rabbi Rithik | Software Developer &amp; Competitive Programmer">
+    <meta property="og:description" content="Fresh RUET CSE Graduate, Codeforces Specialist (1422), 1,300+ problems solved. Built backend applications and REST APIs with Python, FastAPI, Node.js, PostgreSQL, and MongoDB.">
+    <meta property="og:image" content="profile.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Md. Fazle Rabbi Rithik | Software Developer">
+    <meta name="twitter:description" content="RUET CSE graduate, Backend Developer, and Codeforces Specialist (1422). Open to Junior Software Engineer roles.">
+    <meta name="twitter:image" content="profile.jpg">
+
+    <!-- Crisp Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><text x='16' y='22' font-family='sans-serif' font-size='18' font-weight='800' fill='white' text-anchor='middle'>R</text></svg>">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 </head>
 <body>
     <div id="toolkit-background" aria-hidden="true"></div>
+
+    <!-- Ambient Sound Toggle -->
     <button class="ambient-sound-toggle" type="button" aria-label="Turn click sounds on" aria-pressed="false" title="Turn click sounds on">
         <i class="fas fa-volume-xmark" aria-hidden="true"></i>
     </button>
-    <header><nav><div class="container">
-        <a class="logo" href="#hero">Rithik</a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#research">Research</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div></nav></header>
-    <main>
-        <section id="hero" class="hero-section"><div class="container hero-content">
-            <div class="hero-text">
-                <p class="eyebrow"><span class="status-dot"></span> CSE graduate · RUET · Dhaka, Bangladesh</p>
-                <h1>Md. Fazle Rabbi <span>Rithik</span></h1>
-                <p class="role-line">Software Developer <span>·</span> Backend &amp; Computer Vision</p>
-                <p class="summary">I build useful web applications and REST APIs with Python, FastAPI, JavaScript, and SQL. I also enjoy the hard problems behind algorithms and computer vision.</p>
-                <div class="hero-action-rows">
-                    <div class="action-row"><a class="btn primary" href="#projects">Explore my work <i class="fas fa-arrow-down"></i></a></div>
-                    <div class="action-row"><a class="btn linkedin-btn" href="https://www.linkedin.com/in/md-fazle-rabbi-rithik/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i> LinkedIn <i class="fas fa-arrow-up-right-from-square"></i></a><a class="btn cv-btn" href="rithik_LinkedIn.pdf" download><i class="fas fa-file-arrow-down"></i> Download CV</a></div>
-                    <div class="action-row"><a class="btn ghost" href="https://github.com/FR-Rithik" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a><a class="btn ghost" href="https://leetcode.com/u/4nNFqMa8KA/" target="_blank" rel="noreferrer"><i class="fas fa-code"></i> LeetCode</a></div>
-                </div>
-                <div class="hero-stats"><div><strong>1,200+</strong><span>problems solved</span></div><div><strong>1422</strong><span>Codeforces peak</span></div><div><strong>8+</strong><span>YOLO experiments</span></div></div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a class="logo" href="#hero">Rithik</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-            <div class="hero-image"><div class="portrait-frame"><img src="profile.jpg" alt="Portrait of Md. Fazle Rabbi Rithik"></div><div class="floating-note"><i class="fas fa-graduation-cap"></i><span><strong>RUET</strong><small>B.Sc. Computer Science &amp; Engineering</small></span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>
-        </div></section>
-        <section id="about" class="section"><div class="container narrow reveal"><p class="eyebrow">A little about me</p><h2>Curious by nature.<br><span>Practical by design.</span></h2><p class="body-copy">I’m a Computer Science and Engineering graduate from Rajshahi University of Engineering &amp; Technology. I build backend applications and APIs, explore computer vision, and enjoy competitive programming. I care about clear code, thoughtful data models, and building things people can use.</p></div></section>
-        <section id="education" class="section education-section section-muted"><div class="container reveal"><div class="section-heading"><div><p class="eyebrow">Academic background</p><h2>Education</h2></div></div><div class="education-grid">
-            <article class="education-card featured-education"><div class="education-banner ruet-banner"><img src="images/ruet-logo.png" alt="Rajshahi University of Engineering &amp; Technology logo"><span>RUET</span></div><div class="education-content"><p class="education-date"><time datetime="2022-03">Mar 2022</time> – <time datetime="2026-08">Aug 2026</time></p><h3>Rajshahi University of Engineering &amp; Technology</h3><p class="education-degree">B.Sc. in Computer Science &amp; Engineering</p></div></article>
-            <article class="education-card"><div class="education-banner saint-joseph-banner"><img src="images/saint joseph-logo.png" alt="St. Joseph Higher Secondary School logo"><span>St. Joseph</span></div><div class="education-content"><p class="education-date"><time datetime="2018-06">Jun 2018</time> – <time datetime="2020-03">Mar 2020</time></p><h3>St. Joseph Higher Secondary School</h3><p class="education-degree">HSC, Science</p></div></article>
-            <article class="education-card"><div class="education-banner panchagarh-banner"><img src="images/panchagarh-bp.png" alt="Panchagarh BP Government High School logo"><span>Panchagarh BP</span></div><div class="education-content"><p class="education-date"><time datetime="2013-01">Jan 2013</time> – <time datetime="2018-02">Feb 2018</time></p><h3>Panchagarh BP Govt. High School</h3><p class="education-degree">Secondary School Certificate</p></div></article>
-        </div></div></section>
-        <section id="skills" class="section section-muted"><div class="container reveal"><div class="section-heading"><div><p class="eyebrow">What I work with</p><h2>Technical toolkit</h2></div></div><div class="skills-container">
-            <article class="skill-card"><span class="skill-icon"><i class="fas fa-code"></i></span><h3>Languages</h3><div class="chip-group"><span><i class="devicon-cplusplus-plain colored" aria-hidden="true"></i>C++</span><span><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span><span><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</span><span><i class="fas fa-database" aria-hidden="true"></i>SQL</span><span><i class="devicon-c-plain colored" aria-hidden="true"></i>C (basic)</span></div></article>
-            <article class="skill-card"><span class="skill-icon"><i class="fas fa-server"></i></span><h3>Backend</h3><div class="chip-group"><span><i class="devicon-fastapi-plain colored" aria-hidden="true"></i>FastAPI</span><span><i class="devicon-nodejs-plain colored" aria-hidden="true"></i>Node.js</span><span><i class="fas fa-code" aria-hidden="true"></i>REST APIs</span></div></article>
-            <article class="skill-card"><span class="skill-icon"><i class="fas fa-database"></i></span><h3>Databases &amp; ORMs</h3><div class="chip-group"><span><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</span><span><i class="devicon-mongodb-plain colored" aria-hidden="true"></i>MongoDB</span><span><i class="devicon-sqlalchemy-plain colored" aria-hidden="true"></i>SQLAlchemy</span><span><i class="devicon-mongoose-plain colored" aria-hidden="true"></i>Mongoose</span></div></article>
-            <article class="skill-card"><span class="skill-icon"><i class="fab fa-docker"></i></span><h3>Tools &amp; Platforms</h3><div class="chip-group"><span><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</span><span><i class="devicon-github-original" aria-hidden="true"></i>GitHub</span><span><i class="devicon-docker-plain colored" aria-hidden="true"></i>Docker</span><span><i class="devicon-docker-plain colored" aria-hidden="true"></i>Docker Compose</span><span><i class="devicon-linux-plain colored" aria-hidden="true"></i>Linux</span><span><i class="devicon-pytest-plain colored" aria-hidden="true"></i>Pytest</span></div></article>
-            <article class="skill-card"><span class="skill-icon"><i class="fas fa-brain"></i></span><h3>Computer Science</h3><div class="chip-group"><span><i class="fas fa-diagram-project" aria-hidden="true"></i>Data Structures</span><span><i class="fas fa-brain" aria-hidden="true"></i>Algorithms</span><span><i class="fas fa-cubes" aria-hidden="true"></i>OOP</span><span><i class="fas fa-desktop" aria-hidden="true"></i>Operating Systems</span><span><i class="fas fa-network-wired" aria-hidden="true"></i>Networks</span></div></article>
-        </div></div></section>
-        <section id="projects" class="section"><div class="container reveal"><div class="section-heading"><div><p class="eyebrow">Things I’ve built</p><h2>Selected projects</h2></div><a class="text-link" href="https://github.com/FR-Rithik" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i> More on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a></div><div class="projects-grid">
-            <article class="project-card featured"><img class="project-image" src="images/annotation-wizard.png" alt="Annotation Wizard dataset review interface with road damage boxes"><div class="project-body"><div class="project-top"><span class="project-number">01 / FEATURED</span><span class="project-pill"><i class="devicon-fastapi-plain colored" aria-hidden="true"></i> FastAPI <span aria-hidden="true">·</span> <i class="fas fa-microchip" aria-hidden="true"></i> ONNX Runtime</span></div><div class="project-title-row"><h3>Annotation Wizard</h3><div class="project-links project-title-links"><a class="project-link-live" href="https://annotation-wizard.onrender.com/" target="_blank" rel="noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square"></i></a><a href="https://github.com/FR-Rithik/annotation-wizard" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source code <i class="fas fa-arrow-up-right-from-square"></i></a></div></div><p>Automated road-damage dataset labeling, built to take teams from image archive to editable annotations.</p><ul><li>Accepts image dataset ZIPs, runs YOLO inference, and exports YOLO-format labels for four road-damage classes.</li><li>Review jobs with bounding-box and class editing, API-key protection, and PostgreSQL persistence.</li></ul><div class="project-tags"><span><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span><span><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</span><span><i class="devicon-docker-plain colored" aria-hidden="true"></i>Docker</span></div></div></article>
-            <article class="project-card library-project"><div class="library-cover" aria-hidden="true"><div class="library-cover-orb orb-a"></div><div class="library-cover-orb orb-b"></div><i class="fas fa-book-open"></i><span>LIBRARY / 03</span></div><div class="project-body"><div class="project-top"><span class="project-number">03</span><span class="project-pill"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i> Node.js <span aria-hidden="true">·</span> <i class="devicon-mongodb-plain colored" aria-hidden="true"></i> MongoDB</span></div><div class="project-title-row"><h3>Library Management System</h3><div class="project-links project-title-links"><a href="https://github.com/FR-Rithik/Library-Management" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source code <i class="fas fa-arrow-up-right-from-square"></i></a></div></div><p>A full-stack library application with dedicated admin and student workflows.</p><ul><li>Book inventory, browsing, borrowing, returns, and borrowing-history tracking.</li><li>Express REST endpoints and Mongoose models for users, books, and borrowing records.</li><li>Secure registration and login with bcrypt password hashing.</li></ul><div class="project-tags"><span><i class="devicon-express-original" aria-hidden="true"></i>Express.js</span><span><i class="devicon-mongodb-plain colored" aria-hidden="true"></i>MongoDB</span><span><i class="devicon-mongoose-plain colored" aria-hidden="true"></i>Mongoose</span><span><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</span></div></div></article>
-            <article class="project-card"><img class="project-image" src="images/algorithm-visualizer.png" alt="Algorithm visualizer showing sorting and data structure visualizations"><div class="project-body"><div class="project-top"><span class="project-number">02</span><span class="project-pill"><i class="devicon-javascript-plain colored" aria-hidden="true"></i> JavaScript <span aria-hidden="true">·</span> <i class="fas fa-brain" aria-hidden="true"></i> Algorithms</span></div><div class="project-title-row"><h3>Algorithm Visualizer</h3><div class="project-links project-title-links"><a href="https://github.com/FR-Rithik/algovisualizer" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source code <i class="fas fa-arrow-up-right-from-square"></i></a></div></div><p>An interactive web project that makes classic algorithms and data structures easier to explore visually.</p><ul><li>Visual demonstrations for sorting, tree traversal, linked lists, and binary search trees.</li><li>Built an approachable browser interface for stepping through algorithm behavior.</li></ul><div class="project-tags"><span><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</span><span><i class="fas fa-brain" aria-hidden="true"></i>Algorithms</span><span><i class="fas fa-chart-line" aria-hidden="true"></i>Visualization</span></div></div></article>
-                   </div></div></section>
-        <section id="research" class="section section-muted"><div class="container reveal"><div class="section-heading"><div><p class="eyebrow">Undergraduate thesis</p><h2>Research &amp; experiments</h2></div></div><article class="research-card"><img class="research-image" src="images\train_batch1.jpg" alt="Examples of road damage classes used in the thesis study"><div class="research-content"><p class="research-label"><i class="fas fa-eye" aria-hidden="true"></i> Computer Vision <span aria-hidden="true">·</span> <i class="fas fa-brain" aria-hidden="true"></i> YOLOv8</p><h3>Class-Aware Data Augmentation for Vision-Based Road Damage Detection: A Systematic Ablation Study</h3><p>Designed and ran 8+ experiments to evaluate geometric, color, blur/noise, and occlusion/mixing augmentation strategies across four road-damage classes. Compared class-level and overall detection performance using precision, recall, and mAP50, and authored the thesis documentation.</p></div></article></div></section>
-        <section id="achievements" class="section"><div class="container reveal"><div class="section-heading"><div><p class="eyebrow">Beyond the keyboard</p><h2>Programming achievements</h2></div></div><div class="achievement-columns">
-            <section class="achievement-column contests-column" aria-labelledby="contest-results-title"><div class="achievement-column-heading"><span class="column-kicker">On the team</span><h3 id="contest-results-title">Contest results</h3></div><div class="contest-list">
-                <article class="contest-result"><span class="achievement-icon icpc-icon"><i class="fas fa-trophy" aria-hidden="true"></i></span><div><h4>ICPC Asia Dhaka Regional 2025</h4><p><strong>Rank 73</strong><span aria-hidden="true"> · </span>Ruet Potato Coders</p></div></article>
-                <article class="contest-result"><span class="achievement-icon duet-icon"><i class="fas fa-medal" aria-hidden="true"></i></span><div><h4>DUET IUPC 2025</h4><p><strong>Rank 73</strong><span aria-hidden="true"> · </span>RUET BRUTEFORCE</p></div></article>
-                <article class="contest-result"><span class="achievement-icon ncpc-icon"><i class="fas fa-flag" aria-hidden="true"></i></span><div><h4>NCPC 2023 · JU</h4><p>Participant <span aria-hidden="true"> · </span>RUET CHUNINS</p></div></article>
-                <article class="contest-result"><span class="achievement-icon ruet-icon"><i class="fas fa-ranking-star" aria-hidden="true"></i></span><div><h4>RUET Intra Contests</h4><p><strong>Rank 6</strong> <span aria-hidden="true">·</span> CODESPARK 2022 team</p><p><strong>Rank 6</strong> <span aria-hidden="true">·</span> CODESMASH 2021 individual</p></div></article>
-            </div></section>
-            <section class="achievement-column profile-column" aria-labelledby="competitive-profile-title"><div class="achievement-column-heading"><span class="column-kicker">Individual highlights</span><h3 id="competitive-profile-title">Competitive profile</h3></div><div class="profile-highlights">
-                <article class="profile-highlight codeforces-highlight"><span class="achievement-icon"><i class="fas fa-code" aria-hidden="true"></i></span><div><h4>Codeforces <span class="rank-badge">Specialist</span></h4><p>Maximum rating <strong>1422</strong></p><a href="https://codeforces.com/profile/_Rithik" target="_blank" rel="noreferrer">View profile <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></article>
-                <article class="profile-highlight solved-highlight"><span class="solved-count">1,200<span>+</span></span><div><h4>Problems solved</h4><p>Across Codeforces, LeetCode, CSES, and LightOJ</p></div></article>
-                <article class="profile-highlight setter-highlight"><span class="achievement-icon"><i class="fas fa-pen-to-square" aria-hidden="true"></i></span><div><h4>Problem setter</h4><p>Created problems, statements, and test cases for the ICPC-format RUET CodeSmash 2022 fresher contest.</p></div></article>
-            </div></section>
-        </div></div></section>
-        <section id="contact" class="section contact-section"><div class="container reveal"><p class="eyebrow">Get in touch</p><h2>Have a good problem<br><span>to solve together?</span></h2><p class="contact-intro">I’d be glad to hear about software engineering opportunities and interesting projects.</p><a class="btn primary" href="mailto:f.rabbi.ri@gmail.com">Say hello <i class="fas fa-arrow-right"></i></a><div class="contact-links"><a href="mailto:f.rabbi.ri@gmail.com"><i class="fas fa-envelope"></i> f.rabbi.ri@gmail.com</a><a href="https://www.linkedin.com/in/md-fazle-rabbi-rithik/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn <i class="fas fa-arrow-up-right-from-square"></i></a><a href="https://github.com/FR-Rithik" target="_blank" rel="noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub <i class="fas fa-arrow-up-right-from-square"></i></a></div></div></section>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section matching original aesthetic -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow"><span class="status-dot"></span> CSE GRADUATE · RUET · DHAKA, BANGLADESH</p>
+                    <h1>Md. Fazle Rabbi <span class="gradient-name">Rithik</span></h1>
+                    <p class="role-line">Software Developer <span>·</span> Backend &amp; Computer Vision</p>
+                    <p class="summary">I build useful web applications and REST APIs with Python, FastAPI, JavaScript, and SQL. I also enjoy the hard problems behind algorithms and computer vision.</p>
+                    
+                    <div class="hero-action-rows">
+                        <div class="action-row">
+                            <a class="btn primary-btn" href="#projects">Explore my work <i class="fas fa-arrow-down"></i></a>
+                        </div>
+                        <div class="action-row">
+                            <a class="btn linkedin-btn" href="https://www.linkedin.com/in/md-fazle-rabbi-rithik/" target="_blank" rel="noreferrer">
+                                <i class="fab fa-linkedin"></i> LinkedIn <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a class="btn cv-btn" href="Md_Fazle_Rabbi_Rithik_CV.pdf" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-arrow-down"></i> Download CV
+                            </a>
+                        </div>
+                        <div class="action-row">
+                            <a class="btn ghost-btn github-btn" href="https://github.com/FR-Rithik" target="_blank" rel="noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a class="btn ghost-btn leetcode-btn" href="https://leetcode.com/u/4nNFqMa8KA/" target="_blank" rel="noreferrer">
+                                <i class="fas fa-code"></i> LeetCode
+                            </a>
+                            <a class="btn ghost-btn cf-btn" href="https://codeforces.com/profile/_Rithik" target="_blank" rel="noreferrer" title="Codeforces Profile">
+                                <i class="fas fa-chart-simple"></i> Codeforces
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="portrait-frame" tabindex="0" role="region" aria-label="Portrait of Md. Fazle Rabbi Rithik. Hover or click to switch photo.">
+                        <img class="photo-default" src="profile.jpg" alt="Portrait of Md. Fazle Rabbi Rithik" loading="eager">
+                        <img class="photo-hover" src="profile2.JPG" alt="Md. Fazle Rabbi Rithik working on laptop" loading="eager">
+                    </div>
+                    <div class="floating-note">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <span>
+                            <strong>RUET</strong>
+                            <small>B.Sc. Computer Science &amp; Engineering</small>
+                        </span>
+                    </div>
+                    <div class="orbit orbit-one" aria-hidden="true"></div>
+                    <div class="orbit orbit-two" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Concise, Grounded, Professional) -->
+        <section id="about" class="section section-about">
+            <div class="container narrow reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><i class="fas fa-user"></i> A Little About Me</p>
+                        <h2>Engineering with clarity<br><span>and purpose.</span></h2>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <p class="about-lead">
+                        I am a fresh Computer Science &amp; Engineering graduate from <strong>Rajshahi University of Engineering &amp; Technology (RUET)</strong> (CGPA <strong>3.48 / 4.00</strong>) and an active competitive programmer (<strong>Codeforces Specialist 1422</strong>, <strong>1,300+</strong> problems solved).
+                    </p>
+                    <p class="about-sub">
+                        My primary focus is backend engineering and systems: architecting clean REST APIs, modeling robust relational and document databases, and writing maintainable code using <strong>Python, FastAPI, Node.js, PostgreSQL, and MongoDB</strong>. I also enjoy the algorithmic challenges behind computer vision and applied machine learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section section-education">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><i class="fas fa-university"></i> Academic History</p>
+                        <h2>Education</h2>
+                    </div>
+                </div>
+                <div class="education-grid">
+                    <!-- RUET Featured Education Card with CGPA 3.48/4.00 -->
+                    <article class="education-card featured-education">
+                        <div class="education-banner ruet-banner">
+                            <img src="images/ruet-logo.png" alt="Rajshahi University of Engineering &amp; Technology logo">
+                            <span>RUET</span>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-meta">
+                                <span class="education-date"><i class="far fa-calendar-alt"></i> Mar 2022 – Aug 2026</span>
+                                <span class="education-gpa-badge"><i class="fas fa-award"></i> CGPA: 3.48 / 4.00</span>
+                            </div>
+                            <h3>Rajshahi University of Engineering &amp; Technology</h3>
+                            <p class="education-degree">B.Sc. in Computer Science &amp; Engineering</p>
+                            <p class="education-note">Core coursework: Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, Software Engineering.</p>
+                        </div>
+                    </article>
+
+                    <!-- St. Joseph Card -->
+                    <article class="education-card">
+                        <div class="education-banner saint-joseph-banner">
+                            <img src="images/saint-joseph-logo.png" alt="St. Joseph Higher Secondary School logo">
+                            <span>St. Joseph</span>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-meta">
+                                <span class="education-date"><i class="far fa-calendar-alt"></i> Jun 2018 – Mar 2020</span>
+                                <span class="education-gpa-badge">GPA: 5.00 / 5.00</span>
+                            </div>
+                            <h3>St. Joseph Higher Secondary School</h3>
+                            <p class="education-degree">Higher Secondary Certificate (HSC) — Science</p>
+                        </div>
+                    </article>
+
+                    <!-- Panchagarh BP Card -->
+                    <article class="education-card">
+                        <div class="education-banner panchagarh-banner">
+                            <img src="images/panchagarh-bp.png" alt="Panchagarh BP Government High School logo">
+                            <span>Panchagarh BP</span>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-meta">
+                                <span class="education-date"><i class="far fa-calendar-alt"></i> Jan 2013 – Feb 2018</span>
+                                <span class="education-gpa-badge">GPA: 5.00 / 5.00</span>
+                            </div>
+                            <h3>Panchagarh BP Govt. High School</h3>
+                            <p class="education-degree">Secondary School Certificate (SSC) — Science</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Toolkit / Skills Section -->
+        <section id="skills" class="section section-skills">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><i class="fas fa-toolbox"></i> Engineering Stack</p>
+                        <h2>Technical Toolkit</h2>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <article class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-code"></i></span>
+                        <h3>Programming Languages</h3>
+                        <div class="chip-group">
+                            <span><i class="devicon-python-plain colored"></i> Python</span>
+                            <span><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span><i class="devicon-c-plain colored"></i> C</span>
+                            <span><i class="fas fa-database"></i> SQL</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-server"></i></span>
+                        <h3>Backend &amp; APIs</h3>
+                        <div class="chip-group">
+                            <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                            <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span><i class="devicon-express-original"></i> Express.js</span>
+                            <span><i class="fas fa-network-wired"></i> REST APIs &amp; HTTP</span>
+                            <span><i class="devicon-sqlalchemy-plain colored"></i> SQLAlchemy</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-database"></i></span>
+                        <h3>Databases &amp; Modeling</h3>
+                        <div class="chip-group">
+                            <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                            <span><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                            <span><i class="devicon-mongoose-plain colored"></i> Mongoose</span>
+                            <span><i class="fas fa-table"></i> Schema &amp; Data Modeling</span>
+                            <span><i class="fas fa-filter"></i> Complex Queries &amp; Joins</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon"><i class="fab fa-docker"></i></span>
+                        <h3>Tools &amp; DevOps</h3>
+                        <div class="chip-group">
+                            <span><i class="devicon-git-plain colored"></i> Git</span>
+                            <span><i class="devicon-github-original"></i> GitHub</span>
+                            <span><i class="devicon-docker-plain colored"></i> Docker</span>
+                            <span><i class="devicon-docker-plain colored"></i> Docker Compose</span>
+                            <span><i class="devicon-linux-plain colored"></i> Linux</span>
+                            <span><i class="devicon-pytest-plain colored"></i> Pytest</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-brain"></i></span>
+                        <h3>Core Computer Science</h3>
+                        <div class="chip-group">
+                            <span><i class="fas fa-diagram-project"></i> Data Structures</span>
+                            <span><i class="fas fa-brain"></i> Algorithms</span>
+                            <span><i class="fas fa-cubes"></i> OOP Principles</span>
+                            <span><i class="fas fa-microchip"></i> Operating Systems</span>
+                            <span><i class="fas fa-network-wired"></i> Computer Networks</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon"><i class="fas fa-eye"></i></span>
+                        <h3>Computer Vision &amp; AI</h3>
+                        <div class="chip-group">
+                            <span><i class="fas fa-bullseye"></i> YOLOv8</span>
+                            <span><i class="fas fa-microchip"></i> ONNX Runtime</span>
+                            <span><i class="fas fa-images"></i> Data Augmentation</span>
+                            <span><i class="fas fa-chart-line"></i> Model Evaluation (mAP)</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (3 Balanced Columns, Compact & Polished) -->
+        <section id="projects" class="section section-projects">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><i class="fas fa-cubes"></i> Featured Software</p>
+                        <h2>Selected Projects</h2>
+                    </div>
+                    <a class="text-link" href="https://github.com/FR-Rithik" target="_blank" rel="noreferrer">
+                        <i class="fab fa-github"></i> All Repositories on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 01: Annotation Wizard -->
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img class="project-image" src="images/annotation-wizard.png" alt="Annotation Wizard dataset review interface">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <span class="project-number">01</span>
+                                <span class="project-pill"><i class="devicon-fastapi-plain colored"></i> FastAPI · ONNX</span>
+                            </div>
+                            <div class="project-title-row">
+                                <h3>Annotation Wizard</h3>
+                                <div class="project-title-links">
+                                    <a class="project-link-live" href="https://annotation-wizard.onrender.com/" target="_blank" rel="noreferrer" title="Open Live Demo">
+                                        <i class="fas fa-arrow-up-right-from-square"></i> Live
+                                    </a>
+                                    <a href="https://github.com/FR-Rithik/annotation-wizard" target="_blank" rel="noreferrer" title="Source Code">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-summary">Automated computer vision dataset review platform that transforms raw image archives into verified YOLO annotations.</p>
+                            <ul class="project-highlights">
+                                <li>Background ONNX Runtime YOLO model inference for 4 road damage classes.</li>
+                                <li>Full CRUD bounding-box editor, PostgreSQL models, and Dockerized deployment.</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>FastAPI</span>
+                                <span>ONNX</span>
+                                <span>PostgreSQL</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 02: Library Management System -->
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img class="project-image" src="images/library-management.png" alt="Library Management System Dashboard">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <span class="project-number">02</span>
+                                <span class="project-pill"><i class="devicon-nodejs-plain colored"></i> Node.js · MongoDB</span>
+                            </div>
+                            <div class="project-title-row">
+                                <h3>Library Management</h3>
+                                <div class="project-title-links">
+                                    <a href="https://github.com/FR-Rithik/Library-Management" target="_blank" rel="noreferrer" title="Source Code">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-summary">Full-stack web application translating real-world library operations into robust database and user workflows.</p>
+                            <ul class="project-highlights">
+                                <li>Role-based admin and student workflows for catalog browsing, issuing, and returns.</li>
+                                <li>Express REST APIs, Mongoose validation schemas, and bcrypt authentication.</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>Express.js</span>
+                                <span>MongoDB</span>
+                                <span>Mongoose</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 03: Algorithm Visualizer -->
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img class="project-image" src="images/algorithm-visualizer.png" alt="Algorithm Visualizer interface">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-top">
+                                <span class="project-number">03</span>
+                                <span class="project-pill"><i class="devicon-javascript-plain colored"></i> JS · Algorithms</span>
+                            </div>
+                            <div class="project-title-row">
+                                <h3>Algorithm Visualizer</h3>
+                                <div class="project-title-links">
+                                    <a class="project-link-live" href="https://fr-rithik.github.io/algovisualizer/" target="_blank" rel="noreferrer" title="Open Visualizer">
+                                        <i class="fas fa-arrow-up-right-from-square"></i> Live
+                                    </a>
+                                    <a href="https://github.com/FR-Rithik/algovisualizer" target="_blank" rel="noreferrer" title="Source Code">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-summary">Interactive browser visualization tool demonstrating fundamental algorithms and data structures in real time.</p>
+                            <ul class="project-highlights">
+                                <li>Step-by-step visual execution for classic sorting algorithms, BST, and linked lists.</li>
+                                <li>Real-time state transitions and speed controls built with vanilla JavaScript &amp; Canvas.</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>HTML5 Canvas</span>
+                                <span>Data Structures</span>
+                                <span>Algorithms</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section (Compact, Well-Proportioned Spotlight) -->
+        <section id="research" class="section section-research">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><i class="fas fa-microscope"></i> Undergraduate Thesis</p>
+                        <h2>Research &amp; Experiments</h2>
+                    </div>
+                </div>
+                <article class="research-card">
+                    <div class="research-media">
+                        <img class="research-image" src="images/train_batch1.jpg" alt="Sample YOLOv8 training batch augmentation collage">
+                        <div class="research-media-caption">
+                            <i class="fas fa-images"></i> Sample YOLOv8 Training Batch (4 Damage Classes)
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <div class="research-top">
+                            <span class="project-pill"><i class="fas fa-brain"></i> Computer Vision · YOLOv8</span>
+                            <span class="project-number">THESIS // RUET</span>
+                        </div>
+                        <h3>Class-Aware Data Augmentation for Road Damage Detection</h3>
+                        <p class="research-desc">
+                            Designed and benchmarked <strong>8+ systematic YOLOv8 ablation experiments</strong> across four distinct road-damage classes (Longitudinal, Transverse, Alligator Cracking, and Potholes) to evaluate precision, recall, and detection accuracy.
+                        </p>
+                        <div class="research-results-strip">
+                            <div class="result-box">
+                                <span class="result-val">68.4%</span>
+                                <span class="result-lbl">Peak mAP@0.5</span>
+                            </div>
+                            <div class="result-box">
+                                <span class="result-val">+4.2%</span>
+                                <span class="result-lbl">Vs Baseline</span>
+                            </div>
+                            <div class="result-box">
+                                <span class="result-val">8+</span>
+                                <span class="result-lbl">Ablations</span>
+                            </div>
+                        </div>
+                        <p class="research-finding">
+                            <strong>Key Finding:</strong> Class-aware targeted augmentations delivered significant recall gains on minority defect classes compared to standard uniform augmentation pipelines.
+                        </p>
+                        <div class="project-tags research-tags">
+                            <span><i class="fas fa-bullseye"></i> YOLOv8</span>
+                            <span><i class="devicon-python-plain colored"></i> PyTorch</span>
+                            <span><i class="fas fa-chart-line"></i> mAP Evaluation</span>
+                            <span><i class="fas fa-wand-magic-sparkles"></i> Data Augmentation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Programming Achievements Section (Consistent Team Spellings & LeetCode SQL 50) -->
+        <section id="achievements" class="section section-achievements">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><i class="fas fa-trophy"></i> Competitive Programming</p>
+                        <h2>Contest Results &amp; Profiles</h2>
+                    </div>
+                </div>
+
+                <div class="achievement-columns">
+                    <!-- Contest Results Column -->
+                    <section class="achievement-column contests-column" aria-labelledby="contest-results-title">
+                        <div class="achievement-column-heading">
+                            <span class="column-kicker">On The Team</span>
+                            <h3 id="contest-results-title">Contest Results</h3>
+                        </div>
+                        <div class="contest-list">
+                            <article class="contest-result">
+                                <span class="achievement-icon icpc-icon"><i class="fas fa-trophy"></i></span>
+                                <div>
+                                    <h4>ICPC Asia Dhaka Regional 2025</h4>
+                                    <p><strong>Rank 73</strong> <span class="sep">·</span> Team: <code>Ruet_Potato_Coders</code></p>
+                                </div>
+                            </article>
+                            <article class="contest-result">
+                                <span class="achievement-icon duet-icon"><i class="fas fa-medal"></i></span>
+                                <div>
+                                    <h4>DUET IUPC 2025</h4>
+                                    <p><strong>Rank 73</strong> <span class="sep">·</span> Team: <code>RUET_BRUTEFORCE</code></p>
+                                </div>
+                            </article>
+                            <article class="contest-result">
+                                <span class="achievement-icon ncpc-icon"><i class="fas fa-flag"></i></span>
+                                <div>
+                                    <h4>NCPC 2023 · Jahangirnagar University</h4>
+                                    <p>Participant <span class="sep">·</span> Team: <code>RUET_CHUNINS</code></p>
+                                </div>
+                            </article>
+                            <article class="contest-result">
+                                <span class="achievement-icon ruet-icon"><i class="fas fa-ranking-star"></i></span>
+                                <div>
+                                    <h4>RUET Intra-University Contests</h4>
+                                    <p><strong>Rank 6</strong> <span class="sep">·</span> CODESPARK 2022 (Team)</p>
+                                    <p><strong>Rank 6</strong> <span class="sep">·</span> CODESMASH 2021 (Individual)</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Competitive Profile Column -->
+                    <section class="achievement-column profile-column" aria-labelledby="competitive-profile-title">
+                        <div class="achievement-column-heading">
+                            <span class="column-kicker">Individual Highlights</span>
+                            <h3 id="competitive-profile-title">Competitive Profile</h3>
+                        </div>
+                        <div class="profile-highlights">
+                            <!-- Codeforces Specialist -->
+                            <article class="profile-highlight codeforces-highlight">
+                                <span class="achievement-icon"><i class="fas fa-code"></i></span>
+                                <div>
+                                    <h4>Codeforces <span class="rank-badge">Specialist</span></h4>
+                                    <p>Max Rating: <strong>1422</strong></p>
+                                    <a href="https://codeforces.com/profile/_Rithik" target="_blank" rel="noreferrer">
+                                        View Profile <i class="fas fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- 1,300+ Solved -->
+                            <article class="profile-highlight solved-highlight">
+                                <span class="solved-count">1,300<span>+</span></span>
+                                <div>
+                                    <h4>Problems Solved</h4>
+                                    <p>Across Codeforces, LeetCode, CSES, and LightOJ</p>
+                                </div>
+                            </article>
+
+                            <!-- LeetCode SQL 50 Study Plan -->
+                            <article class="profile-highlight sql-highlight">
+                                <span class="achievement-icon"><i class="fas fa-database"></i></span>
+                                <div>
+                                    <h4>LeetCode SQL 50</h4>
+                                    <p>Mastery in complex joins, aggregations, window functions &amp; subqueries</p>
+                                    <a href="https://leetcode.com/u/4nNFqMa8KA/" target="_blank" rel="noreferrer">
+                                        View LeetCode <i class="fas fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Problem Setter -->
+                            <article class="profile-highlight setter-highlight">
+                                <span class="achievement-icon"><i class="fas fa-pen-to-square"></i></span>
+                                <div>
+                                    <h4>Problem Setter · CodeSmash 2022</h4>
+                                    <p>Authored problems, test cases, and problem statements for the ICPC-format RUET fresher contest.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container reveal">
+                <p class="eyebrow"><i class="fas fa-paper-plane"></i> Get In Touch</p>
+                <h2>Have an opportunity or problem<br><span>to solve together?</span></h2>
+                <p class="contact-intro">
+                    I am actively seeking <strong>Junior Software Engineer</strong> and <strong>Backend Developer</strong> roles. Let's connect!
+                </p>
+                <div class="contact-action-wrapper">
+                    <a class="btn primary-btn btn-large" href="mailto:f.rabbi.ri@gmail.com">
+                        <i class="fas fa-envelope"></i> Send an Email <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-links-grid">
+                    <a href="mailto:f.rabbi.ri@gmail.com" class="contact-pill">
+                        <i class="fas fa-envelope"></i> f.rabbi.ri@gmail.com
+                    </a>
+                    <a href="tel:+8801850698500" class="contact-pill">
+                        <i class="fas fa-phone"></i> +880 1850698500
+                    </a>
+                    <a href="https://www.linkedin.com/in/md-fazle-rabbi-rithik/" target="_blank" rel="noreferrer" class="contact-pill">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://github.com/FR-Rithik" target="_blank" rel="noreferrer" class="contact-pill">
+                        <i class="fab fa-github"></i> GitHub Profile <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://codeforces.com/profile/_Rithik" target="_blank" rel="noreferrer" class="contact-pill">
+                        <i class="fas fa-code"></i> Codeforces Profile <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer><div class="container"><a class="logo" href="#hero">Rithik</a><p>© 2026 Md. Fazle Rabbi Rithik</p><a href="#hero">Back to top ↑</a></div></footer>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a class="logo" href="#hero">Rithik</a>
+                <span>© 2026 Md. Fazle Rabbi Rithik · Built with clean code</span>
+            </div>
+            <div class="footer-right">
+                <a href="#hero">Back to Top ↑</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

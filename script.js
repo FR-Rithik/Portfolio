@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -212,4 +212,46 @@
         });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+
+    // ==========================================
+    // Theme Switcher (Dark / Light Mode)
+    // ==========================================
+    const themeToggle = document.querySelector('#theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const storedTheme = localStorage.getItem('portfolio-theme');
+    const initialTheme = storedTheme || 'dark';
+
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+        if (themeMeta) {
+            themeMeta.setAttribute('content', theme === 'dark' ? '#0c1120' : '#f8fafc');
+        }
+    };
+
+    applyTheme(initialTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+    }
+
+    // ==========================================
+    // Portrait Frame Toggle on Click / Keyboard
+    // ==========================================
+    const portraitFrame = document.querySelector('.portrait-frame, .portrait-viewport');
+    if (portraitFrame) {
+        portraitFrame.addEventListener('click', () => {
+            portraitFrame.classList.toggle('is-active');
+        });
+        portraitFrame.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                portraitFrame.classList.toggle('is-active');
+            }
+        });
+    }
 });
